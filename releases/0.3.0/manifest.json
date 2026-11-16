@@ -1,0 +1,210 @@
+{
+  "app": "daybook",
+  "format": 1,
+  "version": "0.3.0",
+  "released": "2026-11-16T02:48:37.145Z",
+  "entry": "pc/keeper.js",
+  "minBoot": 1,
+  "files": [
+    {
+      "path": "app/css/daybook.css",
+      "size": 15882,
+      "sha256": "00e801388af532124014bbb3679a312ee305e053d909e8da0f3335e37f69108c"
+    },
+    {
+      "path": "app/icons/apple-touch-icon.png",
+      "size": 1985,
+      "sha256": "9ec769b5b85ed999deb03980c9d482b1e178707b4519c0bb30653aa79a5e96cd"
+    },
+    {
+      "path": "app/icons/icon-192.png",
+      "size": 2292,
+      "sha256": "19008e5adf266dae2cba9ae356929f8173b2500d429659c496aa27c1c2125222"
+    },
+    {
+      "path": "app/icons/icon-512.png",
+      "size": 6971,
+      "sha256": "ea0eea9c0e505c369da444789560483ff47372ccbf0085f4e286b82a1d9d463f"
+    },
+    {
+      "path": "app/icons/icon-maskable-512.png",
+      "size": 5907,
+      "sha256": "3f0b03078b488f6f8b43a31e450a3797bff0e9378b95fcf319d3f894befa6e23"
+    },
+    {
+      "path": "app/img/portrait-placeholder.svg",
+      "size": 1061,
+      "sha256": "7f65bc74a6dc65ab99b3206c83a4a315e2341abb235fc75e969933c572012c09"
+    },
+    {
+      "path": "app/index.html",
+      "size": 1327,
+      "sha256": "aab85d2a0bfaa09d6cd04a22366a05c96aaf9066435a3da8830d2801745334be"
+    },
+    {
+      "path": "app/js/calendar.js",
+      "size": 7468,
+      "sha256": "2429df101be0023296960d4b3e181d1c29e2fadc130a540bc52f7c83f3832e67"
+    },
+    {
+      "path": "app/js/checkins.js",
+      "size": 7175,
+      "sha256": "83f18bc81d603200d9155c193f91c356e1b361cedbec9f56da84512f335698ab"
+    },
+    {
+      "path": "app/js/clock.js",
+      "size": 4694,
+      "sha256": "549211049fd09dd66da1d194a2e47003faf11eb4cef995cd3959760c6fed5de3"
+    },
+    {
+      "path": "app/js/config.js",
+      "size": 1800,
+      "sha256": "7cb7cc7e26d5d355ebe6ebdde378130b9b86da76f088ff2b32d0d1a642967881"
+    },
+    {
+      "path": "app/js/day.js",
+      "size": 8463,
+      "sha256": "211f192e58c9f2f4220c4189b3a1644bcf2045ac035f946ab5c3ba3997620c7a"
+    },
+    {
+      "path": "app/js/lines.js",
+      "size": 3796,
+      "sha256": "c46066148e64fd0a7e97a4675032620692a301937c13f041b9c34c9b96388ec8"
+    },
+    {
+      "path": "app/js/local.js",
+      "size": 6101,
+      "sha256": "31c9f00b3012fe6a31a5ab984ffa35bab0ae6ea05e15617e54d669678a1b692e"
+    },
+    {
+      "path": "app/js/main.js",
+      "size": 21431,
+      "sha256": "37b6a68d1a7ff9990d83d08579294aab6d84eb73a0ae7d1dcd2bd176306167b4"
+    },
+    {
+      "path": "app/js/package.json",
+      "size": 23,
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+    },
+    {
+      "path": "app/js/screens/add.js",
+      "size": 6932,
+      "sha256": "823f8f8a3b38685eba8e267645c1cd4809ecf92d4d208d8393acc3de32ef6668"
+    },
+    {
+      "path": "app/js/screens/card.js",
+      "size": 3084,
+      "sha256": "05d7277f255890c460f3a297b1c8ba66b252be3bfc5a2618991742b77984b966"
+    },
+    {
+      "path": "app/js/screens/settings.js",
+      "size": 11448,
+      "sha256": "d4eb872225070c9250614d5e12c475a6e16d24159afededa0428c280e1fa4736"
+    },
+    {
+      "path": "app/js/screens/today.js",
+      "size": 4486,
+      "sha256": "23cf7595844f6f450ef6644e9f7c7e91aeb974b85452518fd6461519bb8e47f8"
+    },
+    {
+      "path": "app/js/screens/week.js",
+      "size": 1973,
+      "sha256": "f8634b30cce7b5e4b5fa236ce5a0f155d3e406bb9217ccf3a3c5dd2d6e918b1c"
+    },
+    {
+      "path": "app/js/script.js",
+      "size": 1288,
+      "sha256": "c0bab1383e6e6936efabd52bab0ff22886b989b1f52fad1091253fa60ee99cde"
+    },
+    {
+      "path": "app/js/store.js",
+      "size": 1115,
+      "sha256": "4b90e2b47fcaa7a5467e71ec5e12cd4686d8ddb9baa2b74517b5d8d168ae88c7"
+    },
+    {
+      "path": "app/js/types.js",
+      "size": 1507,
+      "sha256": "7de1249c977d6ee87b9d5a6e7a5f69600cb22618181fd23550714c7a475999e4"
+    },
+    {
+      "path": "app/js/util.js",
+      "size": 617,
+      "sha256": "da5c1e4de3176cd46f7ef19149bcabdee5b76c3ca192b15b9404c7d488771630"
+    },
+    {
+      "path": "app/js/voice.js",
+      "size": 7437,
+      "sha256": "e36ab89feb2ded0d5e794da27efb2e66ab06d49df23ef97c68ca03aa04f8ebe9"
+    },
+    {
+      "path": "app/js/watch.js",
+      "size": 1058,
+      "sha256": "959bfe3129d85c9da38e2cf4670f2a0ae9a9f42b83b975b8806d84fc63646fc6"
+    },
+    {
+      "path": "app/lines/lines.json",
+      "size": 37521,
+      "sha256": "6064a533be37ad58fce7d721fa695709a865a4463f839f4ff3042908af685ad5"
+    },
+    {
+      "path": "app/manifest.webmanifest",
+      "size": 579,
+      "sha256": "fd9f639e4d9c1f6826306ff060e293e297e2f008fadcfc3a156a52a1a4f212df"
+    },
+    {
+      "path": "app/sw.js",
+      "size": 1612,
+      "sha256": "a5a2174a243e3aed67841fa7fa85c0393e86e26df14b39110fd79cee4554cb33"
+    },
+    {
+      "path": "config.example.json",
+      "size": 1679,
+      "sha256": "25d2b131e3f2c7c5335f5c4707bc9cf69becf3d70b71e58b8366772252975c4a"
+    },
+    {
+      "path": "pc/boot.js",
+      "size": 7826,
+      "sha256": "e31e42c784e491dc67059a6038fcc508419975b048507d15c8eeebca03206a0c"
+    },
+    {
+      "path": "pc/install.js",
+      "size": 17036,
+      "sha256": "d4a7662b7392fb312a1a961a98d72a90e5c166b23bf0c23ae5bb793a2f4a7190"
+    },
+    {
+      "path": "pc/keeper.js",
+      "size": 16642,
+      "sha256": "3afb15192533c57b8d32a9efb23e48c86486771366e10ce8e9550ae699ff206d"
+    },
+    {
+      "path": "pc/lib/edge.js",
+      "size": 4714,
+      "sha256": "762a18233ff92f05eafd8ce130fe4c5f4a88116a9b7e91d19058ca0b6cbdff2f"
+    },
+    {
+      "path": "pc/lib/setupfile.js",
+      "size": 4667,
+      "sha256": "ec3f0916a6d519314f84c02ac19f690c6583a89b43c3e48d8eef51013c3816d1"
+    },
+    {
+      "path": "pc/lib/updater.js",
+      "size": 18036,
+      "sha256": "981fd75917bd6e3527bfa8a466ca81ba145d48044b1148e3267f1e134f7ac093"
+    },
+    {
+      "path": "pc/lib/winsys.js",
+      "size": 5149,
+      "sha256": "c67d9b5a58e5781471b401851182297f81371a8b1929cef04312bde4e8af08e4"
+    },
+    {
+      "path": "pc/uninstall.js",
+      "size": 6744,
+      "sha256": "a21c94f398ec53132586486da42d1cf7311d7252d428d9a527ae801dfa5d06a7"
+    },
+    {
+      "path": "server.js",
+      "size": 9536,
+      "sha256": "d53aa623b149325de7782edeb1bde7949d3a0792f92f1793a0038a609e5e65b8"
+    }
+  ]
+}

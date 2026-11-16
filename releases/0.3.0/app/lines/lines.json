@@ -1,0 +1,1123 @@
+{
+  "version": "0.2.0",
+  "about": [
+    "Every line DAYBOOK 0.2.0 can say, with an id. This is the recording script.",
+    "A line with {slots} is spoken by joining recorded pieces: the fixed words, then a part from a bank.",
+    "Slots: {time} comes from the \"time\" bank; {name} is her name, recorded on her device only.",
+    "See docs/VOICE.md for how each part is recorded (carrier sentences, two tones) and joined.",
+    "Free text from the calendar is shown on screen, never spoken."
+  ],
+  "lines": [
+    {
+      "id": "hello.name",
+      "text": "Hello, {name}.",
+      "when": "Start of the day, before the day line. Skipped when no name is set."
+    },
+    {
+      "id": "day.monday.morning",
+      "text": "Good morning. Today is Monday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the morning."
+    },
+    {
+      "id": "day.tuesday.morning",
+      "text": "Good morning. Today is Tuesday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the morning."
+    },
+    {
+      "id": "day.wednesday.morning",
+      "text": "Good morning. Today is Wednesday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the morning."
+    },
+    {
+      "id": "day.thursday.morning",
+      "text": "Good morning. Today is Thursday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the morning."
+    },
+    {
+      "id": "day.friday.morning",
+      "text": "Good morning. Today is Friday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the morning."
+    },
+    {
+      "id": "day.saturday.morning",
+      "text": "Good morning. Today is Saturday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the morning."
+    },
+    {
+      "id": "day.sunday.morning",
+      "text": "Good morning. Today is Sunday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the morning."
+    },
+    {
+      "id": "day.monday.afternoon",
+      "text": "Good afternoon. Today is Monday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the afternoon."
+    },
+    {
+      "id": "day.tuesday.afternoon",
+      "text": "Good afternoon. Today is Tuesday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the afternoon."
+    },
+    {
+      "id": "day.wednesday.afternoon",
+      "text": "Good afternoon. Today is Wednesday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the afternoon."
+    },
+    {
+      "id": "day.thursday.afternoon",
+      "text": "Good afternoon. Today is Thursday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the afternoon."
+    },
+    {
+      "id": "day.friday.afternoon",
+      "text": "Good afternoon. Today is Friday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the afternoon."
+    },
+    {
+      "id": "day.saturday.afternoon",
+      "text": "Good afternoon. Today is Saturday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the afternoon."
+    },
+    {
+      "id": "day.sunday.afternoon",
+      "text": "Good afternoon. Today is Sunday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the afternoon."
+    },
+    {
+      "id": "day.monday.evening",
+      "text": "Good evening. Today is Monday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the evening."
+    },
+    {
+      "id": "day.tuesday.evening",
+      "text": "Good evening. Today is Tuesday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the evening."
+    },
+    {
+      "id": "day.wednesday.evening",
+      "text": "Good evening. Today is Wednesday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the evening."
+    },
+    {
+      "id": "day.thursday.evening",
+      "text": "Good evening. Today is Thursday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the evening."
+    },
+    {
+      "id": "day.friday.evening",
+      "text": "Good evening. Today is Friday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the evening."
+    },
+    {
+      "id": "day.saturday.evening",
+      "text": "Good evening. Today is Saturday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the evening."
+    },
+    {
+      "id": "day.sunday.evening",
+      "text": "Good evening. Today is Sunday.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the evening."
+    },
+    {
+      "id": "day.monday.night",
+      "text": "Hello. It's Monday night.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the night."
+    },
+    {
+      "id": "day.tuesday.night",
+      "text": "Hello. It's Tuesday night.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the night."
+    },
+    {
+      "id": "day.wednesday.night",
+      "text": "Hello. It's Wednesday night.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the night."
+    },
+    {
+      "id": "day.thursday.night",
+      "text": "Hello. It's Thursday night.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the night."
+    },
+    {
+      "id": "day.friday.night",
+      "text": "Hello. It's Friday night.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the night."
+    },
+    {
+      "id": "day.saturday.night",
+      "text": "Hello. It's Saturday night.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the night."
+    },
+    {
+      "id": "day.sunday.night",
+      "text": "Hello. It's Sunday night.",
+      "when": "Start of the day (app opened, or the daily greeting time), in the night."
+    },
+    {
+      "id": "thought.intro",
+      "text": "Here's a thought for today.",
+      "when": "Start of the day, before the thought."
+    },
+    {
+      "id": "thought.01",
+      "text": "There's something good in every day. Sometimes it's as simple as a warm cup of tea.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.02",
+      "text": "You've seen a great deal in your life, and you've come through all of it. That's something to be proud of.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.03",
+      "text": "No rush today. Things can go at your own pace.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.04",
+      "text": "A little sunshine through the window can brighten a whole room.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.05",
+      "text": "The people who love you are glad you're in their lives.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.06",
+      "text": "Small things done well make a good day.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.07",
+      "text": "A good laugh is worth more than a spotless kitchen.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.08",
+      "text": "It's a fine day to be kind to yourself.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.09",
+      "text": "Somebody out there is smiling because they know you.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.10",
+      "text": "Every season has its own kind of beauty. So does every age.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.11",
+      "text": "You don't have to do everything today. One or two things is plenty.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.12",
+      "text": "Good music has a way of lifting the heart. Maybe put something nice on today.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.13",
+      "text": "A tidy corner, a full cup, a comfortable chair. Simple things are good things.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.14",
+      "text": "You have a kind way about you. People notice it.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.15",
+      "text": "Whatever the weather does, a cosy spot indoors is always there.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.16",
+      "text": "It's nice to stop for a moment and just enjoy where you are.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.17",
+      "text": "Fresh air does wonders, even a few minutes by an open door.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.18",
+      "text": "You've made a lot of people's lives better over the years.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.19",
+      "text": "Today is a fresh page. Fill it however you like.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.20",
+      "text": "Listen for a bird outside. They're usually busy with something cheerful.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.21",
+      "text": "Being yourself is more than enough.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.22",
+      "text": "A phone call to someone you love can brighten two days at once.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.23",
+      "text": "Good things often come quietly.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.24",
+      "text": "Take a deep breath and let your shoulders drop. There. That's better.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.25",
+      "text": "Your stories are worth telling. Somebody would love to hear one.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.26",
+      "text": "There's no wrong way to enjoy a slow day.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.27",
+      "text": "Flowers don't rush, and they still bloom beautifully.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.28",
+      "text": "A smile costs nothing and travels a long way.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.29",
+      "text": "You've got good instincts. Trust them.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.30",
+      "text": "Even a grey day has its comforts: a blanket, a good show, a warm drink.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.31",
+      "text": "It's the little routines that make a home feel like home.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.32",
+      "text": "Every kind word you've ever said is still out there doing good.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.33",
+      "text": "Today doesn't have to be big to be good.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.34",
+      "text": "Look around. There's probably something lovely within reach.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.35",
+      "text": "Your company is a gift to the people around you.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.36",
+      "text": "Some of the best moments are the unplanned ones.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.37",
+      "text": "Treat yourself to something nice today. You've earned it many times over.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.38",
+      "text": "The sky keeps changing. There's always something new up there to see.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.39",
+      "text": "You have a good heart. That never goes out of style.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.40",
+      "text": "Rest isn't wasted time. It's how we get ready for the good parts.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.41",
+      "text": "A favourite chair, a familiar song, a warm meal. Comfort is close by.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.42",
+      "text": "You're stronger than you give yourself credit for.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.43",
+      "text": "The world is a little brighter with you in it.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.44",
+      "text": "Something made you smile yesterday. Something will today, too.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.45",
+      "text": "There's real pleasure in a job done, however small.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.46",
+      "text": "Old songs have a way of making a room feel warm.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.47",
+      "text": "You're allowed to take today one step at a time.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.48",
+      "text": "A window, a view, a moment to look. That's a fine way to spend a minute.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.49",
+      "text": "The people who know you are lucky.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.50",
+      "text": "It's a good day to notice something beautiful.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.51",
+      "text": "Kindness comes back around, often when you least expect it.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.52",
+      "text": "Not every day needs a plan. Some days are for simply being.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.53",
+      "text": "There's always something to look forward to, even if it's just supper.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.54",
+      "text": "Your laugh is one of the best sounds there is.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.55",
+      "text": "Being gentle with yourself is a good habit.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.56",
+      "text": "This day belongs to you. Spend it any way that feels good.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.57",
+      "text": "You've got a lot of love around you, even on the quiet days.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.58",
+      "text": "Good things grow slowly, like gardens and friendships.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.59",
+      "text": "Tea tastes better when you take your time over it.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "thought.60",
+      "text": "However today goes, you are cared for.",
+      "when": "Start of the day: the thought of the day (one per date, rotating)."
+    },
+    {
+      "id": "list.none",
+      "text": "There's nothing on the calendar today. It's a nice, easy day.",
+      "when": "Start of the day, when today has nothing on it."
+    },
+    {
+      "id": "list.nomore",
+      "text": "That's everything on the calendar for today.",
+      "when": "Start of the day, when everything today is already past."
+    },
+    {
+      "id": "list.intro",
+      "text": "Here's what's coming up today.",
+      "when": "Start of the day, before the items."
+    },
+    {
+      "id": "list.more",
+      "text": "There's a bit more on the screen.",
+      "when": "Start of the day, after four items, when there are more."
+    },
+    {
+      "id": "list.allday",
+      "text": "There's something on the calendar for the whole day. It's on the screen.",
+      "when": "Start of the day, when today has an all-day event."
+    },
+    {
+      "id": "list.medicine",
+      "text": "Your medicine is at {time}.",
+      "when": "Start of the day, when today's medicine is still to come."
+    },
+    {
+      "id": "list.medicine.done",
+      "text": "You've had your medicine today. Well done.",
+      "when": "Start of the day, when it is already taken."
+    },
+    {
+      "id": "list.item.psw",
+      "text": "Your PSW is coming at {time}.",
+      "when": "Start of the day: one upcoming psw event."
+    },
+    {
+      "id": "list.item.doctor",
+      "text": "You have a doctor's appointment at {time}.",
+      "when": "Start of the day: one upcoming doctor event."
+    },
+    {
+      "id": "list.item.dentist",
+      "text": "You have a dentist appointment at {time}.",
+      "when": "Start of the day: one upcoming dentist event."
+    },
+    {
+      "id": "list.item.family",
+      "text": "Family is coming to visit at {time}.",
+      "when": "Start of the day: one upcoming family event."
+    },
+    {
+      "id": "list.item.other",
+      "text": "There's something on your calendar at {time}.",
+      "when": "Start of the day: one upcoming other event."
+    },
+    {
+      "id": "soon.psw",
+      "text": "Soon, at {time}, your PSW is coming.",
+      "when": "Reminder, 30 minutes before a psw event."
+    },
+    {
+      "id": "soon.doctor",
+      "text": "Soon, at {time}, you have a doctor's appointment.",
+      "when": "Reminder, 30 minutes before a doctor event."
+    },
+    {
+      "id": "soon.dentist",
+      "text": "Soon, at {time}, you have a dentist appointment.",
+      "when": "Reminder, 30 minutes before a dentist event."
+    },
+    {
+      "id": "soon.family",
+      "text": "Soon, at {time}, family is coming to visit.",
+      "when": "Reminder, 30 minutes before a family event."
+    },
+    {
+      "id": "soon.other",
+      "text": "Soon, at {time}, there's something on your calendar. It's on the screen.",
+      "when": "Reminder, 30 minutes before a other event."
+    },
+    {
+      "id": "now.psw",
+      "text": "Your PSW should be here about now.",
+      "when": "Reminder, at the start of a psw event."
+    },
+    {
+      "id": "now.doctor",
+      "text": "It's time for your doctor's appointment.",
+      "when": "Reminder, at the start of a doctor event."
+    },
+    {
+      "id": "now.dentist",
+      "text": "It's time for your dentist appointment.",
+      "when": "Reminder, at the start of a dentist event."
+    },
+    {
+      "id": "now.family",
+      "text": "Family should be here about now.",
+      "when": "Reminder, at the start of a family event."
+    },
+    {
+      "id": "now.other",
+      "text": "It's time for what's on your calendar. Have a look at the screen.",
+      "when": "Reminder, at the start of a other event."
+    },
+    {
+      "id": "med.due",
+      "text": "It's time for your medicine.",
+      "when": "Medicine reminder, at the set time."
+    },
+    {
+      "id": "med.later",
+      "text": "Have you had your medicine today? When you have, just tap the button.",
+      "when": "Medicine, when first offered well after the set time (the app was opened later)."
+    },
+    {
+      "id": "med.again",
+      "text": "Just a gentle reminder. Your medicine is ready when you are.",
+      "when": "Medicine, a gentle repeat while it is still not tapped."
+    },
+    {
+      "id": "med.thanks.1",
+      "text": "Thank you. Well done.",
+      "when": "After she taps \"I took it\" (one of these, rotating)."
+    },
+    {
+      "id": "med.thanks.2",
+      "text": "Lovely. That's your medicine done for today.",
+      "when": "After she taps \"I took it\" (one of these, rotating)."
+    },
+    {
+      "id": "med.thanks.3",
+      "text": "Good job. Thank you.",
+      "when": "After she taps \"I took it\" (one of these, rotating)."
+    },
+    {
+      "id": "med.thanks.4",
+      "text": "Wonderful. That's taken care of.",
+      "when": "After she taps \"I took it\" (one of these, rotating)."
+    },
+    {
+      "id": "med.thanks.5",
+      "text": "Thank you. One less thing to think about.",
+      "when": "After she taps \"I took it\" (one of these, rotating)."
+    },
+    {
+      "id": "lunch.01",
+      "text": "It's lunchtime. How about a cheese sandwich and a cup of soup?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.02",
+      "text": "It's lunchtime. How about a bowl of soup with some crackers?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.03",
+      "text": "It's lunchtime. How about a tuna sandwich and some fruit?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.04",
+      "text": "It's lunchtime. How about a ham and cheese sandwich and a glass of milk?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.05",
+      "text": "It's lunchtime. How about a yogurt, some crackers and an apple?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.06",
+      "text": "It's lunchtime. How about an egg salad sandwich?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.07",
+      "text": "It's lunchtime. How about warming up some leftovers?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.08",
+      "text": "It's lunchtime. How about cheese and crackers with some grapes?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.09",
+      "text": "It's lunchtime. How about a chicken sandwich and a cup of tea?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.10",
+      "text": "It's lunchtime. How about a bowl of cereal with some fruit on top?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.11",
+      "text": "It's lunchtime. How about cottage cheese with fruit and a slice of bread?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "lunch.12",
+      "text": "It's lunchtime. How about a toasted sandwich and a pickle?",
+      "when": "Lunch nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.01",
+      "text": "It's suppertime. How about a frozen dinner, heated up in the microwave?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.02",
+      "text": "It's suppertime. How about some soup and a buttered bun?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.03",
+      "text": "It's suppertime. How about warming up some leftovers?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.04",
+      "text": "It's suppertime. How about some chicken, with potatoes and a few vegetables?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.05",
+      "text": "It's suppertime. How about a plate of pasta with sauce?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.06",
+      "text": "It's suppertime. How about a baked potato with cheese on top?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.07",
+      "text": "It's suppertime. How about some fish with rice and peas?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.08",
+      "text": "It's suppertime. How about a ready meal from the freezer?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.09",
+      "text": "It's suppertime. How about a bowl of stew and some bread?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.10",
+      "text": "It's suppertime. How about a sandwich and a bowl of soup?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.11",
+      "text": "It's suppertime. How about some shepherd's pie?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "supper.12",
+      "text": "It's suppertime. How about an omelette and toast?",
+      "when": "Supper nudge (one per date, rotating)."
+    },
+    {
+      "id": "dishes.1",
+      "text": "How about doing the dishes? A tidy kitchen is a nice thing to come back to.",
+      "when": "Dishes nudge (one per date, rotating)."
+    },
+    {
+      "id": "dishes.2",
+      "text": "Would now be a good time for the dishes? It only takes a few minutes.",
+      "when": "Dishes nudge (one per date, rotating)."
+    },
+    {
+      "id": "dishes.3",
+      "text": "How about the dishes? A bit of music makes it go quickly.",
+      "when": "Dishes nudge (one per date, rotating)."
+    },
+    {
+      "id": "dishes.4",
+      "text": "Time for a little tidy-up? The dishes would be a lovely thing to get done.",
+      "when": "Dishes nudge (one per date, rotating)."
+    },
+    {
+      "id": "praise.meal.1",
+      "text": "Lovely. I hope it was tasty.",
+      "when": "After \"Done\" on a lunch or supper nudge (rotating)."
+    },
+    {
+      "id": "praise.meal.2",
+      "text": "Well done. A good meal makes all the difference.",
+      "when": "After \"Done\" on a lunch or supper nudge (rotating)."
+    },
+    {
+      "id": "praise.meal.3",
+      "text": "Wonderful. Good food, good day.",
+      "when": "After \"Done\" on a lunch or supper nudge (rotating)."
+    },
+    {
+      "id": "praise.meal.4",
+      "text": "That's great. Thank you.",
+      "when": "After \"Done\" on a lunch or supper nudge (rotating)."
+    },
+    {
+      "id": "praise.dishes.1",
+      "text": "Wonderful. Thank you for doing that.",
+      "when": "After \"Done\" on the dishes nudge (rotating)."
+    },
+    {
+      "id": "praise.dishes.2",
+      "text": "Well done. The kitchen looks better already.",
+      "when": "After \"Done\" on the dishes nudge (rotating)."
+    },
+    {
+      "id": "praise.dishes.3",
+      "text": "That's great. Nice work.",
+      "when": "After \"Done\" on the dishes nudge (rotating)."
+    },
+    {
+      "id": "praise.dishes.4",
+      "text": "Lovely. That's one more good thing done today.",
+      "when": "After \"Done\" on the dishes nudge (rotating)."
+    },
+    {
+      "id": "week.intro",
+      "text": "Here's your week.",
+      "when": "When she opens the week view."
+    },
+    {
+      "id": "add.kind",
+      "text": "Let's add an appointment. What kind is it?",
+      "when": "Add an appointment, step 1."
+    },
+    {
+      "id": "add.what",
+      "text": "What would you like to call it? You can type it in, or just tap Next.",
+      "when": "Add an appointment, step 1b (only for \"Something else\")."
+    },
+    {
+      "id": "add.day",
+      "text": "Which day is it?",
+      "when": "Add an appointment, step 2."
+    },
+    {
+      "id": "add.hour",
+      "text": "What time does it start?",
+      "when": "Add an appointment, step 3."
+    },
+    {
+      "id": "add.minute",
+      "text": "Which of these times is it?",
+      "when": "Add an appointment, step 4."
+    },
+    {
+      "id": "add.confirm",
+      "text": "Is this right?",
+      "when": "Add an appointment, step 5."
+    },
+    {
+      "id": "add.done",
+      "text": "Thank you. It's on the calendar now.",
+      "when": "Add an appointment: it reached the calendar."
+    },
+    {
+      "id": "add.waiting",
+      "text": "Thank you. I've saved it, and it will go on the calendar as soon as the internet is back.",
+      "when": "Add an appointment: saved on the device, sent later."
+    },
+    {
+      "id": "test.voice",
+      "text": "Hello. This is how the Daybook voice sounds.",
+      "when": "Settings screen: the voice test button."
+    },
+    {
+      "id": "mood.ask",
+      "text": "How are you feeling today?",
+      "when": "After the start-of-day words, at most once a day and never at night. Three big answers; she can skip it."
+    },
+    {
+      "id": "mood.reply.good",
+      "text": "That's lovely to hear. I hope it stays a good day.",
+      "when": "After she answers \"Good\"."
+    },
+    {
+      "id": "mood.reply.okay",
+      "text": "Thank you for telling me. I hope the day gets a little brighter.",
+      "when": "After she answers \"Okay\"."
+    },
+    {
+      "id": "mood.reply.notgood",
+      "text": "I'm sorry you're not feeling your best today. Take things gently. Your family is thinking of you.",
+      "when": "After she answers \"Not so good\" (her family sees it on the family page)."
+    },
+    {
+      "id": "call.ask",
+      "text": "Would you like your family to give you a call?",
+      "when": "She tapped \"I'd like a call\" on the today screen."
+    },
+    {
+      "id": "call.sent",
+      "text": "Thank you. I've let your family know you'd like a call.",
+      "when": "After \"Yes, please\": the message reached Google."
+    },
+    {
+      "id": "call.waiting",
+      "text": "Thank you. I'll let your family know as soon as the internet is back.",
+      "when": "After \"Yes, please\": saved on the device, sent later."
+    },
+    {
+      "id": "message.1",
+      "text": "Have a lovely day.",
+      "when": "The family's message for today, when it is exactly this line (other messages are shown, not spoken)."
+    },
+    {
+      "id": "message.2",
+      "text": "We'll give you a call this evening.",
+      "when": "The family's message for today, when it is exactly this line."
+    },
+    {
+      "id": "message.3",
+      "text": "Family is coming to see you today.",
+      "when": "The family's message for today, when it is exactly this line."
+    },
+    {
+      "id": "message.4",
+      "text": "We love you.",
+      "when": "The family's message for today, when it is exactly this line."
+    },
+    {
+      "id": "message.5",
+      "text": "We're thinking of you today.",
+      "when": "The family's message for today, when it is exactly this line."
+    },
+    {
+      "id": "message.6",
+      "text": "Don't forget to drink some water today.",
+      "when": "The family's message for today, when it is exactly this line."
+    }
+  ],
+  "banks": {
+    "time": {
+      "about": "Appointment times, rounded to the nearest quarter hour (the exact time is on screen). 12-hour, no a.m./p.m., no year. Each part is recorded twice: mid-sentence tone and end-of-sentence tone.",
+      "tones": [
+        "mid",
+        "end"
+      ],
+      "parts": [
+        {
+          "id": "time.01.00",
+          "text": "one o'clock"
+        },
+        {
+          "id": "time.01.15",
+          "text": "quarter past one"
+        },
+        {
+          "id": "time.01.30",
+          "text": "half past one"
+        },
+        {
+          "id": "time.01.45",
+          "text": "quarter to two"
+        },
+        {
+          "id": "time.02.00",
+          "text": "two o'clock"
+        },
+        {
+          "id": "time.02.15",
+          "text": "quarter past two"
+        },
+        {
+          "id": "time.02.30",
+          "text": "half past two"
+        },
+        {
+          "id": "time.02.45",
+          "text": "quarter to three"
+        },
+        {
+          "id": "time.03.00",
+          "text": "three o'clock"
+        },
+        {
+          "id": "time.03.15",
+          "text": "quarter past three"
+        },
+        {
+          "id": "time.03.30",
+          "text": "half past three"
+        },
+        {
+          "id": "time.03.45",
+          "text": "quarter to four"
+        },
+        {
+          "id": "time.04.00",
+          "text": "four o'clock"
+        },
+        {
+          "id": "time.04.15",
+          "text": "quarter past four"
+        },
+        {
+          "id": "time.04.30",
+          "text": "half past four"
+        },
+        {
+          "id": "time.04.45",
+          "text": "quarter to five"
+        },
+        {
+          "id": "time.05.00",
+          "text": "five o'clock"
+        },
+        {
+          "id": "time.05.15",
+          "text": "quarter past five"
+        },
+        {
+          "id": "time.05.30",
+          "text": "half past five"
+        },
+        {
+          "id": "time.05.45",
+          "text": "quarter to six"
+        },
+        {
+          "id": "time.06.00",
+          "text": "six o'clock"
+        },
+        {
+          "id": "time.06.15",
+          "text": "quarter past six"
+        },
+        {
+          "id": "time.06.30",
+          "text": "half past six"
+        },
+        {
+          "id": "time.06.45",
+          "text": "quarter to seven"
+        },
+        {
+          "id": "time.07.00",
+          "text": "seven o'clock"
+        },
+        {
+          "id": "time.07.15",
+          "text": "quarter past seven"
+        },
+        {
+          "id": "time.07.30",
+          "text": "half past seven"
+        },
+        {
+          "id": "time.07.45",
+          "text": "quarter to eight"
+        },
+        {
+          "id": "time.08.00",
+          "text": "eight o'clock"
+        },
+        {
+          "id": "time.08.15",
+          "text": "quarter past eight"
+        },
+        {
+          "id": "time.08.30",
+          "text": "half past eight"
+        },
+        {
+          "id": "time.08.45",
+          "text": "quarter to nine"
+        },
+        {
+          "id": "time.09.00",
+          "text": "nine o'clock"
+        },
+        {
+          "id": "time.09.15",
+          "text": "quarter past nine"
+        },
+        {
+          "id": "time.09.30",
+          "text": "half past nine"
+        },
+        {
+          "id": "time.09.45",
+          "text": "quarter to ten"
+        },
+        {
+          "id": "time.10.00",
+          "text": "ten o'clock"
+        },
+        {
+          "id": "time.10.15",
+          "text": "quarter past ten"
+        },
+        {
+          "id": "time.10.30",
+          "text": "half past ten"
+        },
+        {
+          "id": "time.10.45",
+          "text": "quarter to eleven"
+        },
+        {
+          "id": "time.11.00",
+          "text": "eleven o'clock"
+        },
+        {
+          "id": "time.11.15",
+          "text": "quarter past eleven"
+        },
+        {
+          "id": "time.11.30",
+          "text": "half past eleven"
+        },
+        {
+          "id": "time.11.45",
+          "text": "quarter to twelve"
+        },
+        {
+          "id": "time.12.00",
+          "text": "twelve o'clock"
+        },
+        {
+          "id": "time.12.15",
+          "text": "quarter past twelve"
+        },
+        {
+          "id": "time.12.30",
+          "text": "half past twelve"
+        },
+        {
+          "id": "time.12.45",
+          "text": "quarter to one"
+        }
+      ]
+    },
+    "name": {
+      "about": "Her name, recorded on her device only. Never written in any file that is committed. The placeholder voice reads it from the local config.",
+      "tones": [
+        "mid",
+        "end"
+      ],
+      "parts": [
+        {
+          "id": "name",
+          "text": "(her name, from the local config)"
+        }
+      ]
+    }
+  }
+}

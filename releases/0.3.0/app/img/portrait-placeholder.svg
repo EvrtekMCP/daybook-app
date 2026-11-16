@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- PLACEHOLDER for the character portrait (a crew-style animated character comes later).
+       A plain warm sun: friendly, and not a face anyone has to recognise. -->
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#fff6dc"/>
+      <stop offset="1" stop-color="#f3e2bf"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#sky)"/>
+  <g stroke="#e9a93a" stroke-width="10" stroke-linecap="round">
+    <line x1="100" y1="22" x2="100" y2="44"/>
+    <line x1="100" y1="156" x2="100" y2="178"/>
+    <line x1="22" y1="100" x2="44" y2="100"/>
+    <line x1="156" y1="100" x2="178" y2="100"/>
+    <line x1="45" y1="45" x2="60" y2="60"/>
+    <line x1="140" y1="140" x2="155" y2="155"/>
+    <line x1="45" y1="155" x2="60" y2="140"/>
+    <line x1="140" y1="60" x2="155" y2="45"/>
+  </g>
+  <circle cx="100" cy="100" r="38" fill="#f2b544"/>
+  <circle cx="100" cy="100" r="38" fill="none" stroke="#e9a93a" stroke-width="4"/>
+</svg>

@@ -1,0 +1,360 @@
+/* DAYBOOK 0.3.0 — calm, warm, very large, high contrast. One thing at a time.
+   Nothing flashes: cards fade in slowly, and motion is off when the device asks. */
+
+:root {
+  --bg: #fbf5ea;          /* warm cream */
+  --bg-2: #f3e8d4;        /* sand: the thought, past items */
+  --card: #fffdf8;
+  --ink: #2a211b;         /* deep warm brown: about 15:1 on the cream */
+  --ink-soft: #5a4b3f;    /* about 7.8:1 */
+  --accent: #9a4319;      /* terracotta, for the part of the day */
+  --primary: #2e5e4e;     /* deep green buttons, white text about 7.4:1 */
+  --primary-down: #234a3d;
+  --secondary: #efe2cb;
+  --secondary-down: #e4d3b5;
+  --line: #e0cfb2;
+  --med: #fff0c4;         /* soft sunrise yellow for the medicine */
+  --done: #2b6a3c;
+  --shade: rgba(42, 33, 27, 0.42);
+  --radius: 1.1rem;
+  --gap: 1rem;
+  /* Base size: large everywhere, larger on big screens. 1920x1080 ~ 33px, 1366x768 ~ 25px,
+     iPad 1024x768 ~ 23px, iPad 820x1180 ~ 27px. */
+  font-size: clamp(20px, calc(0.6vw + 1.2vh + 8px), 40px);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  overflow: hidden;
+}
+
+input, select, textarea { -webkit-user-select: text; user-select: text; font: inherit; }
+
+.view {
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.screen {
+  min-height: 100%;
+  padding: max(1.1rem, env(safe-area-inset-top)) max(1.8rem, env(safe-area-inset-right)) max(1.1rem, env(safe-area-inset-bottom)) max(1.8rem, env(safe-area-inset-left));
+}
+
+h1, h2, p, figure, blockquote, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+
+/* --- buttons: always words, always big ------------------------------------------- */
+
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 1.3rem;
+  font-weight: 650;
+  line-height: 1.15;
+  min-height: 3rem;
+  padding: 0.55em 1.1em;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color 160ms ease;
+}
+.btn:focus-visible { outline: 0.2rem solid var(--accent); outline-offset: 0.15rem; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:active { background: var(--primary-down); }
+.btn-secondary { background: var(--secondary); color: var(--ink); border: 0.12rem solid var(--line); }
+.btn-secondary:active { background: var(--secondary-down); }
+.btn-big { font-size: 1.7rem; min-height: 3.7rem; padding: 0.55em 1.5em; }
+.btn:disabled { opacity: 0.75; cursor: default; }
+
+/* --- TODAY -------------------------------------------------------------------------- */
+
+.today {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas: "head head" "left right";
+  gap: 0.6rem 2.2rem;
+  height: 100%;
+}
+
+.hold-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6.5rem;
+  height: 6.5rem;
+  z-index: 5;
+  touch-action: none;
+}
+
+.today-head { grid-area: head; }
+.dayline {
+  font-size: min(4.6rem, 8.2vw);
+  font-weight: 750;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+}
+.dayline .part { color: var(--accent); font-weight: 600; }
+.date { font-size: 1.45rem; color: var(--ink-soft); margin-top: 0.25rem; }
+
+.today-left { grid-area: left; display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+.hello { display: flex; align-items: center; gap: 1.1rem; }
+.portrait-slot {
+  flex: none;
+  width: 6.2rem;
+  height: 6.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--bg-2);
+  border: 0.15rem solid var(--line);
+}
+.portrait-slot img { display: block; width: 100%; height: 100%; }
+.greeting { font-size: 1.75rem; font-weight: 650; line-height: 1.15; }
+
+.thought {
+  background: var(--bg-2);
+  border-radius: 1.3rem;
+  padding: 0.9rem 1.2rem 1rem;
+}
+.thought figcaption { font-size: 0.95rem; font-weight: 650; color: var(--ink-soft); margin-bottom: 0.3rem; }
+.thought blockquote { font-size: 1.35rem; line-height: 1.38; }
+
+/* 0.2.0: the family's note for today takes the thought's box on those days (same
+   place and size, a green tint), and the calm "I'd like a call" button sits
+   beside the date, the same place every day. */
+.thought.family-note { background: #e6f1e1; border-left: 0.35rem solid var(--primary); }
+.thought.family-note figcaption { color: var(--primary); }
+.thought.family-note blockquote { font-weight: 600; overflow-wrap: break-word; }
+.date-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.25rem; }
+.date-row .date { margin-top: 0; }
+.btn-call { font-size: 1.3rem; min-height: 3rem; padding: 0.4em 1.1em; }
+/* Wide screens: beside the date. Tall screens (iPad upright): at the end of the greeting
+   row, where the greeting already wraps beside the portrait, so it costs no height. */
+.call-in-hello { display: none; }
+@media (max-aspect-ratio: 1/1) {
+  .call-in-head { display: none; }
+  .call-in-hello { display: block; flex: none; margin-left: auto; padding: 0.35em 0.9em; }
+  .hello .greeting { flex: 1; min-width: 0; }
+}
+
+.today-right { grid-area: right; display: flex; flex-direction: column; gap: 0.7rem; min-width: 0; min-height: 0; }
+.list-title { font-size: 1.45rem; font-weight: 700; }
+.sample-note { font-size: 0.55em; font-weight: 600; color: var(--accent); white-space: nowrap; }
+.items { display: flex; flex-direction: column; gap: 0.6rem; overflow-y: auto; min-height: 0; }
+
+.item {
+  display: grid;
+  grid-template-columns: 5.3em minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--card);
+  border: 0.13rem solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.55rem 0.9rem;
+  font-size: 1.25rem;
+  min-height: 3rem;
+  flex-shrink: 0;          /* a full list scrolls; an item is never squashed (0.2.0 fix) */
+}
+.item .time { font-weight: 700; white-space: nowrap; }
+.item .what { font-weight: 600; overflow-wrap: break-word; min-width: 0; }
+.item .note { display: block; font-size: 0.8em; font-weight: 600; color: var(--ink-soft); }
+.item .note-next { color: var(--primary); }
+.item .note-now { color: var(--accent); }
+.item .note-done { color: var(--done); }
+.item.status-next, .item.is-now { border-color: var(--primary); border-width: 0.2rem; }
+.item.status-past, .item.status-closed { background: var(--bg-2); color: var(--ink-soft); border-color: transparent; }
+.item.kind-medicine.status-due { background: var(--med); border-color: #e6c66a; }
+.item.status-done { background: #eef5ea; border-color: #cfe1c6; }
+.item-empty { grid-template-columns: 1fr; background: transparent; border-style: dashed; }
+.btn-took { font-size: 1.15rem; min-height: 2.6rem; padding: 0.4em 0.9em; }
+
+.btn-week { margin-top: auto; width: 100%; font-size: 1.65rem; min-height: 3.6rem; }
+
+/* Tall screens (iPad held upright): one column */
+@media (max-aspect-ratio: 1/1) {
+  .today {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr);
+    grid-template-areas: "head" "left" "right";
+    gap: 0.65rem;
+  }
+  .dayline { font-size: min(4.4rem, 12.5vw); }
+  .today-left { gap: 0.65rem; }
+  .portrait-slot { width: 5rem; height: 5rem; }
+  .greeting { font-size: 1.6rem; }
+  .thought { padding: 0.6rem 1rem 0.7rem; }
+  .thought blockquote { font-size: 1.22rem; }
+  .today-right { gap: 0.4rem; }
+  .items { gap: 0.4rem; }
+  .today.screen { padding-top: max(0.9rem, env(safe-area-inset-top)); padding-bottom: max(0.9rem, env(safe-area-inset-bottom)); }
+  .today .dayline { line-height: 0.98; }
+  .today .btn-week { font-size: 1.5rem; min-height: 3rem; }
+  .btn-week { margin-top: auto; }
+}
+
+/* --- WEEK --------------------------------------------------------------------------- */
+
+.week { display: flex; flex-direction: column; gap: 0.55rem; height: 100%; }
+.week-top { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+.btn-back { font-size: 1.5rem; min-height: 3.4rem; }
+.week-title { font-size: 2rem; font-weight: 750; }
+.days { display: flex; flex-direction: column; flex: 1; min-height: 0; overflow-y: auto; }
+.day {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 2fr);
+  gap: 0.2rem 1rem;
+  align-items: baseline;
+  padding: 0.4rem 0.9rem;
+  border-bottom: 0.12rem solid var(--line);
+  font-size: 1.15rem;
+}
+.day:last-child { border-bottom: 0; }
+.day.is-today { background: var(--card); border: 0.2rem solid var(--primary); border-radius: var(--radius); }
+.day-label { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.55em; }
+.day-name { font-weight: 750; font-size: 1.1em; }
+.day-date { color: var(--ink-soft); font-size: 0.85em; }
+.day-events { display: flex; flex-direction: column; gap: 0.15rem; }
+.day-events li { display: flex; gap: 0.8rem; }
+.ev-time { font-weight: 700; flex: none; width: 5.3em; white-space: nowrap; }
+.ev-what { font-weight: 550; overflow-wrap: break-word; min-width: 0; }
+@media (max-aspect-ratio: 1/1) {
+  .day { grid-template-columns: minmax(0, 1fr); padding: 0.32rem 0.8rem; }
+  .day-events { padding-left: 0.4rem; }
+}
+.day-events .nothing { color: var(--ink-soft); }
+.week-bottom { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.week-bottom .sample-note { font-size: 0.9rem; white-space: normal; }
+.btn-add { font-size: 1.3rem; }
+
+/* --- ADD AN APPOINTMENT -------------------------------------------------------------- */
+
+.add { display: flex; flex-direction: column; gap: 1rem; height: 100%; }
+.add-kicker { font-size: 1.1rem; font-weight: 650; color: var(--accent); }
+.add-q { font-size: 2.3rem; font-weight: 750; line-height: 1.12; }
+.add-body { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
+.choices { display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fill, minmax(9.5em, 1fr)); }
+.btn-choice {
+  background: var(--card);
+  color: var(--ink);
+  border: 0.15rem solid var(--line);
+  font-size: 1.45rem;
+  min-height: 3.6rem;
+}
+.btn-choice:active { background: var(--secondary); }
+.choices-kind { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.choices-kind .btn-choice { min-height: 4.2rem; font-size: 1.6rem; }
+.choices-day { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.choices-day .btn-choice { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem; }
+.btn-day .big { font-size: 1.1em; font-weight: 750; }
+.btn-day .small { font-size: 0.75em; font-weight: 600; color: var(--ink-soft); }
+.choices-hour { grid-template-columns: repeat(auto-fill, minmax(5.6em, 1fr)); }
+.choices-hour .btn-choice { font-size: 1.4rem; white-space: nowrap; padding-left: 0.4em; padding-right: 0.4em; }
+@media (max-aspect-ratio: 1/1) {
+  .choices-kind, .choices-day { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .choices-hour { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .choices-minute { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.choices-minute { grid-template-columns: repeat(auto-fill, minmax(7em, 1fr)); }
+.choices-minute .btn-choice { font-size: 1.8rem; min-height: 4.4rem; }
+.pager { display: flex; justify-content: space-between; gap: 1rem; }
+.add-nav { display: flex; justify-content: space-between; gap: 1rem; }
+.add-nav .btn { min-width: 7em; }
+.what-box { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+.what-input {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 0.5em 0.7em;
+  border-radius: var(--radius);
+  border: 0.15rem solid var(--ink-soft);
+  background: #fff;
+  color: var(--ink);
+}
+.confirm-box { background: var(--card); border: 0.15rem solid var(--line); border-radius: 1.4rem; padding: 1.2rem 1.6rem; }
+.confirm-what { font-size: 2.2rem; font-weight: 750; }
+.confirm-when { font-size: 1.7rem; font-weight: 600; }
+.confirm-buttons { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.add-done { justify-content: center; align-items: flex-start; gap: 2rem; }
+
+/* --- the reminder card ----------------------------------------------------------------- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: var(--shade);
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+}
+.overlay[hidden] { display: none; }
+.card {
+  width: min(56rem, 100%);
+  max-height: 100%;
+  overflow-y: auto;
+  background: var(--card);
+  border-radius: 1.6rem;
+  padding: 1.8rem 2.2rem 2rem;
+  text-align: center;
+  box-shadow: 0 1.2rem 3rem rgba(42, 33, 27, 0.25);
+  animation: card-in 700ms ease-out;
+}
+.card.tone-medicine { background: var(--med); }
+.card.tone-thanks { background: #f1f7ec; }
+.card-kicker { font-size: 1.35rem; font-weight: 700; color: var(--accent); margin-bottom: 0.3rem; }
+.card-title { font-size: 2.8rem; font-weight: 780; line-height: 1.1; }
+.card-time { font-size: 2rem; font-weight: 700; margin-top: 0.4rem; }
+.card-body { font-size: 1.55rem; line-height: 1.35; margin-top: 0.8rem; color: var(--ink); }
+.card-buttons { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; margin-top: 1.5rem; }
+.card-buttons .btn-big { min-width: min(18em, 100%); font-size: 1.9rem; min-height: 4.1rem; }
+.card-buttons .btn-secondary { min-width: 10em; }
+/* three large, equal answers (How are you feeling today?) */
+.card-choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; margin-top: 1.4rem; }
+.btn-feel { background: var(--bg); color: var(--ink); border: 0.18rem solid var(--line); font-size: 1.9rem; min-height: 4.6rem; padding: 0.4em 0.5em; }
+.btn-feel:active { background: var(--secondary); }
+@media (max-aspect-ratio: 1/1) { .card-choices { grid-template-columns: minmax(0, 1fr); } }
+
+@keyframes card-in { from { opacity: 0; transform: translateY(0.6rem); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .card { animation: none; }
+  .btn { transition: none; }
+}
+
+/* --- SETTINGS (for Evrtek: smaller, plainer) --------------------------------------------- */
+
+.settings { font-size: 0.72rem; max-width: 60rem; margin: 0 auto; -webkit-user-select: text; user-select: text; }
+.settings h1 { font-size: 1.6rem; }
+.set-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; position: sticky; top: 0; background: var(--bg); padding: 0.5rem 0; z-index: 2; }
+.set-top-buttons { display: flex; gap: 0.6rem; }
+.settings .btn { font-size: 1rem; min-height: 2.4rem; }
+.settings fieldset { border: 0.1rem solid var(--line); border-radius: 0.8rem; margin: 0.8rem 0; padding: 0.6rem 1rem 0.9rem; }
+.settings legend { font-weight: 700; padding: 0 0.4rem; font-size: 1.05rem; }
+.set-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.8rem; align-items: center; padding: 0.3rem 0; }
+.set-row input, .set-row select { font-size: 1rem; padding: 0.3em 0.5em; border: 0.08rem solid var(--ink-soft); border-radius: 0.4rem; background: #fff; color: var(--ink); min-width: 0; }
+.set-check { display: flex; gap: 0.6rem; }
+.set-check input { width: 1.2rem; height: 1.2rem; }
+.set-buttons { padding: 0.4rem 0; display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; }
+.set-note { color: var(--ink-soft); font-size: 0.9rem; margin: 0.4rem 0; }
+.set-warn { background: var(--med); padding: 0.5rem 0.8rem; border-radius: 0.5rem; font-weight: 650; }
+.med-table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.med-table td { padding: 0.25rem 0.4rem; border-bottom: 0.06rem solid var(--line); }
+
+.starting { display: grid; place-items: center; font-size: 2rem; color: var(--ink-soft); }
