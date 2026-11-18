@@ -1,0 +1,86 @@
+{
+  "_readme": "Copy this file to config.local.json and fill it in (on her PC the installer does it from her setup file). config.local.json is git-ignored and stays on her device only. Times are 24-hour HH:MM. An empty time turns that reminder off. The settings screen (hold the top-left corner for 3 seconds) edits the same values. window.kiosk: true opens Daybook in Edge kiosk mode (harder to leave by accident); false (the default) opens a normal window, maximized, that can be minimized and resized. voice.mode: clips = the recorded voice (bank chris), speech = the computer's own voice (rate and voiceName apply to it only). events.getReadyMinutes: the getting-ready reminder before each appointment (0 = off). character.enabled: the portrait on the today screen (false = the plain sun picture). updates: when her PC looks for a new version each night, where, and how many minutes a new version has to show it started.",
+
+  "name": "",
+  "locale": "en-CA",
+  "clock12h": true,
+
+  "partsOfDay": {
+    "morning": "05:00",
+    "afternoon": "12:00",
+    "evening": "17:00",
+    "night": "21:30"
+  },
+
+  "greetingTime": "08:30",
+
+  "mood": {
+    "ask": true
+  },
+
+  "medicine": {
+    "time": "09:00",
+    "repeatMinutes": 30,
+    "repeatTimes": 3,
+    "lastOffer": "21:00"
+  },
+
+  "nudges": {
+    "lunch": "12:00",
+    "supper": "17:30",
+    "dishes": "18:30",
+    "showMinutes": 45
+  },
+
+  "events": {
+    "getReadyMinutes": 120,
+    "soonMinutes": 30,
+    "showMinutes": 30
+  },
+
+  "voice": {
+    "enabled": true,
+    "mode": "clips",
+    "bank": "chris",
+    "voiceName": "",
+    "rate": 0.9,
+    "pitch": 1.0,
+    "volume": 1.0
+  },
+
+  "chime": {
+    "enabled": true,
+    "volume": 0.5
+  },
+
+  "character": {
+    "enabled": true
+  },
+
+  "notifications": true,
+
+  "calendar": {
+    "provider": "mock",
+    "url": "",
+    "key": "",
+    "refreshMinutes": 15,
+    "daysAhead": 7
+  },
+
+  "checkins": {
+    "heartbeatMinutes": 15
+  },
+
+  "settingsHoldSeconds": 3,
+
+  "window": {
+    "kiosk": false
+  },
+
+  "updates": {
+    "enabled": true,
+    "time": "03:00",
+    "url": "https://evrtekmcp.github.io/daybook-app/latest.json",
+    "trialMinutes": 10
+  }
+}
