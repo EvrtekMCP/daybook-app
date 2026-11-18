@@ -1,0 +1,240 @@
+{
+  "app": "daybook",
+  "format": 1,
+  "version": "0.4.0",
+  "released": "2026-11-18T03:24:14.402Z",
+  "entry": "pc/keeper.js",
+  "minBoot": 1,
+  "files": [
+    {
+      "path": "app/css/daybook.css",
+      "size": 19124,
+      "sha256": "42b2e16c185d333118a068eeb6481005c915931a7298e3c6763cf30862a74d58"
+    },
+    {
+      "path": "app/icons/apple-touch-icon.png",
+      "size": 1985,
+      "sha256": "9ec769b5b85ed999deb03980c9d482b1e178707b4519c0bb30653aa79a5e96cd"
+    },
+    {
+      "path": "app/icons/icon-192.png",
+      "size": 2292,
+      "sha256": "19008e5adf266dae2cba9ae356929f8173b2500d429659c496aa27c1c2125222"
+    },
+    {
+      "path": "app/icons/icon-512.png",
+      "size": 6971,
+      "sha256": "ea0eea9c0e505c369da444789560483ff47372ccbf0085f4e286b82a1d9d463f"
+    },
+    {
+      "path": "app/icons/icon-maskable-512.png",
+      "size": 5907,
+      "sha256": "3f0b03078b488f6f8b43a31e450a3797bff0e9378b95fcf319d3f894befa6e23"
+    },
+    {
+      "path": "app/img/character/character.json",
+      "size": 1175,
+      "sha256": "b91eb7779b3dde35cc852786a483028447080208a2f9af06177b38aa475e3826"
+    },
+    {
+      "path": "app/img/character/eyes.webp",
+      "size": 11118,
+      "sha256": "a2842b4c39268fff9da002dc1e46171d91197f91e53234641125dff4e9976e1d"
+    },
+    {
+      "path": "app/img/character/mouth.webp",
+      "size": 47210,
+      "sha256": "2f9a229c91fe2a1e017555940fbf14e60459d448cfcdd9fb8665c12d79d55ed2"
+    },
+    {
+      "path": "app/img/character/portrait.webp",
+      "size": 31840,
+      "sha256": "8760491597e459f650c554dc83badb6130d83b57ff55063d69d2b8781967a53d"
+    },
+    {
+      "path": "app/img/portrait-placeholder.svg",
+      "size": 1061,
+      "sha256": "7f65bc74a6dc65ab99b3206c83a4a315e2341abb235fc75e969933c572012c09"
+    },
+    {
+      "path": "app/index.html",
+      "size": 1327,
+      "sha256": "ac4137c5a92e84d1123392b52ae35466e50a82dd45cda637caa06c2e96cc1a72"
+    },
+    {
+      "path": "app/js/calendar.js",
+      "size": 7468,
+      "sha256": "2429df101be0023296960d4b3e181d1c29e2fadc130a540bc52f7c83f3832e67"
+    },
+    {
+      "path": "app/js/character.js",
+      "size": 11464,
+      "sha256": "44e9405ccd72e6292b61b93eb21759bf328ad3fdcc7196792569d689c917eae8"
+    },
+    {
+      "path": "app/js/checkins.js",
+      "size": 7175,
+      "sha256": "fd3fb435ca779b9de31495ce00fdfa1ab074c475f01eb4775b8ccbb9d1fe92ff"
+    },
+    {
+      "path": "app/js/clock.js",
+      "size": 4694,
+      "sha256": "549211049fd09dd66da1d194a2e47003faf11eb4cef995cd3959760c6fed5de3"
+    },
+    {
+      "path": "app/js/config.js",
+      "size": 1800,
+      "sha256": "7cb7cc7e26d5d355ebe6ebdde378130b9b86da76f088ff2b32d0d1a642967881"
+    },
+    {
+      "path": "app/js/day.js",
+      "size": 8463,
+      "sha256": "211f192e58c9f2f4220c4189b3a1644bcf2045ac035f946ab5c3ba3997620c7a"
+    },
+    {
+      "path": "app/js/lines.js",
+      "size": 3796,
+      "sha256": "c46066148e64fd0a7e97a4675032620692a301937c13f041b9c34c9b96388ec8"
+    },
+    {
+      "path": "app/js/local.js",
+      "size": 6101,
+      "sha256": "31c9f00b3012fe6a31a5ab984ffa35bab0ae6ea05e15617e54d669678a1b692e"
+    },
+    {
+      "path": "app/js/main.js",
+      "size": 25346,
+      "sha256": "8e0cfc4b853003c153c09bbaa9140ede087cf6a34e7d75580823759f7d0e12c7"
+    },
+    {
+      "path": "app/js/mouth.js",
+      "size": 8518,
+      "sha256": "ae786e830741ca93d48a511f8ecaa921f7f7dc42da4bdefaa9a482bf487986fc"
+    },
+    {
+      "path": "app/js/package.json",
+      "size": 23,
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+    },
+    {
+      "path": "app/js/screens/add.js",
+      "size": 6932,
+      "sha256": "823f8f8a3b38685eba8e267645c1cd4809ecf92d4d208d8393acc3de32ef6668"
+    },
+    {
+      "path": "app/js/screens/card.js",
+      "size": 3084,
+      "sha256": "05d7277f255890c460f3a297b1c8ba66b252be3bfc5a2618991742b77984b966"
+    },
+    {
+      "path": "app/js/screens/settings.js",
+      "size": 11802,
+      "sha256": "1cdec20656bc4f21d79c2df2a861bf484aed81f93f6a7bb8319b0875df1ec839"
+    },
+    {
+      "path": "app/js/screens/today.js",
+      "size": 4733,
+      "sha256": "8a1e8ccebf8e49245eeeed93812243687b97825b6855a745fe9cad2fed30ddac"
+    },
+    {
+      "path": "app/js/screens/week.js",
+      "size": 1973,
+      "sha256": "f8634b30cce7b5e4b5fa236ce5a0f155d3e406bb9217ccf3a3c5dd2d6e918b1c"
+    },
+    {
+      "path": "app/js/script.js",
+      "size": 1288,
+      "sha256": "c0bab1383e6e6936efabd52bab0ff22886b989b1f52fad1091253fa60ee99cde"
+    },
+    {
+      "path": "app/js/store.js",
+      "size": 1115,
+      "sha256": "4b90e2b47fcaa7a5467e71ec5e12cd4686d8ddb9baa2b74517b5d8d168ae88c7"
+    },
+    {
+      "path": "app/js/types.js",
+      "size": 1507,
+      "sha256": "7de1249c977d6ee87b9d5a6e7a5f69600cb22618181fd23550714c7a475999e4"
+    },
+    {
+      "path": "app/js/util.js",
+      "size": 617,
+      "sha256": "da5c1e4de3176cd46f7ef19149bcabdee5b76c3ca192b15b9404c7d488771630"
+    },
+    {
+      "path": "app/js/voice.js",
+      "size": 9492,
+      "sha256": "f9e0b692f57b537e348aacd070e5a4fe468d94b607127ba9e884f25ffd8e3af8"
+    },
+    {
+      "path": "app/js/watch.js",
+      "size": 1058,
+      "sha256": "959bfe3129d85c9da38e2cf4670f2a0ae9a9f42b83b975b8806d84fc63646fc6"
+    },
+    {
+      "path": "app/lines/lines.json",
+      "size": 37521,
+      "sha256": "6064a533be37ad58fce7d721fa695709a865a4463f839f4ff3042908af685ad5"
+    },
+    {
+      "path": "app/manifest.webmanifest",
+      "size": 579,
+      "sha256": "fd9f639e4d9c1f6826306ff060e293e297e2f008fadcfc3a156a52a1a4f212df"
+    },
+    {
+      "path": "app/sw.js",
+      "size": 1612,
+      "sha256": "e507074b4e9d41e5260fab373d944107345c00d43bb37fa1b8b863f6fb0d26f2"
+    },
+    {
+      "path": "config.example.json",
+      "size": 1815,
+      "sha256": "bc320af6bf94580c59026eca804e39e53181d8af34ffb71ce00ed6b9436eb857"
+    },
+    {
+      "path": "pc/boot.js",
+      "size": 7826,
+      "sha256": "e31e42c784e491dc67059a6038fcc508419975b048507d15c8eeebca03206a0c"
+    },
+    {
+      "path": "pc/install.js",
+      "size": 17036,
+      "sha256": "d4a7662b7392fb312a1a961a98d72a90e5c166b23bf0c23ae5bb793a2f4a7190"
+    },
+    {
+      "path": "pc/keeper.js",
+      "size": 16642,
+      "sha256": "3afb15192533c57b8d32a9efb23e48c86486771366e10ce8e9550ae699ff206d"
+    },
+    {
+      "path": "pc/lib/edge.js",
+      "size": 4714,
+      "sha256": "762a18233ff92f05eafd8ce130fe4c5f4a88116a9b7e91d19058ca0b6cbdff2f"
+    },
+    {
+      "path": "pc/lib/setupfile.js",
+      "size": 4667,
+      "sha256": "ec3f0916a6d519314f84c02ac19f690c6583a89b43c3e48d8eef51013c3816d1"
+    },
+    {
+      "path": "pc/lib/updater.js",
+      "size": 18036,
+      "sha256": "981fd75917bd6e3527bfa8a466ca81ba145d48044b1148e3267f1e134f7ac093"
+    },
+    {
+      "path": "pc/lib/winsys.js",
+      "size": 5149,
+      "sha256": "c67d9b5a58e5781471b401851182297f81371a8b1929cef04312bde4e8af08e4"
+    },
+    {
+      "path": "pc/uninstall.js",
+      "size": 6744,
+      "sha256": "a21c94f398ec53132586486da42d1cf7311d7252d428d9a527ae801dfa5d06a7"
+    },
+    {
+      "path": "server.js",
+      "size": 9561,
+      "sha256": "19fb6b3a3817465e9e53944c84cfe7f6c22214ef9b6370cdd286cdb262c411e6"
+    }
+  ]
+}

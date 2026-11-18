@@ -1,0 +1,57 @@
+{
+  "about": "DAYBOOK character frames, made by tools/make-character.js from Portero's approved painted set (Exchange job 001). Positions are in portrait pixels.",
+  "base": {
+    "file": "portrait.webp",
+    "w": 640,
+    "h": 768
+  },
+  "regions": {
+    "mouth": {
+      "file": "mouth.webp",
+      "x": 216,
+      "y": 344,
+      "w": 176,
+      "h": 112,
+      "frames": [
+        "rest",
+        "ai",
+        "e",
+        "o",
+        "u",
+        "mbp",
+        "smile",
+        "happy"
+      ]
+    },
+    "eyes": {
+      "file": "eyes.webp",
+      "x": 184,
+      "y": 216,
+      "w": 224,
+      "h": 72,
+      "frames": [
+        "closed",
+        "listen",
+        "listen-closed"
+      ]
+    }
+  },
+  "standIns": {
+    "fv": "e",
+    "l": "e"
+  },
+  "files": {
+    "portrait.webp": {
+      "bytes": 31840,
+      "sha256": "8760491597e459f650c554dc83badb6130d83b57ff55063d69d2b8781967a53d"
+    },
+    "mouth.webp": {
+      "bytes": 47210,
+      "sha256": "2f9a229c91fe2a1e017555940fbf14e60459d448cfcdd9fb8665c12d79d55ed2"
+    },
+    "eyes.webp": {
+      "bytes": 11118,
+      "sha256": "a2842b4c39268fff9da002dc1e46171d91197f91e53234641125dff4e9976e1d"
+    }
+  }
+}

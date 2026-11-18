@@ -1,15 +1,15 @@
 {
   "app": "daybook",
   "format": 1,
-  "version": "0.3.0",
-  "released": "2026-11-16T02:48:37.145Z",
+  "version": "0.4.0",
+  "released": "2026-11-18T03:24:14.402Z",
   "entry": "pc/keeper.js",
   "minBoot": 1,
   "files": [
     {
       "path": "app/css/daybook.css",
-      "size": 15882,
-      "sha256": "00e801388af532124014bbb3679a312ee305e053d909e8da0f3335e37f69108c"
+      "size": 19124,
+      "sha256": "42b2e16c185d333118a068eeb6481005c915931a7298e3c6763cf30862a74d58"
     },
     {
       "path": "app/icons/apple-touch-icon.png",
@@ -32,6 +32,26 @@
       "sha256": "3f0b03078b488f6f8b43a31e450a3797bff0e9378b95fcf319d3f894befa6e23"
     },
     {
+      "path": "app/img/character/character.json",
+      "size": 1175,
+      "sha256": "b91eb7779b3dde35cc852786a483028447080208a2f9af06177b38aa475e3826"
+    },
+    {
+      "path": "app/img/character/eyes.webp",
+      "size": 11118,
+      "sha256": "a2842b4c39268fff9da002dc1e46171d91197f91e53234641125dff4e9976e1d"
+    },
+    {
+      "path": "app/img/character/mouth.webp",
+      "size": 47210,
+      "sha256": "2f9a229c91fe2a1e017555940fbf14e60459d448cfcdd9fb8665c12d79d55ed2"
+    },
+    {
+      "path": "app/img/character/portrait.webp",
+      "size": 31840,
+      "sha256": "8760491597e459f650c554dc83badb6130d83b57ff55063d69d2b8781967a53d"
+    },
+    {
       "path": "app/img/portrait-placeholder.svg",
       "size": 1061,
       "sha256": "7f65bc74a6dc65ab99b3206c83a4a315e2341abb235fc75e969933c572012c09"
@@ -39,7 +59,7 @@
     {
       "path": "app/index.html",
       "size": 1327,
-      "sha256": "aab85d2a0bfaa09d6cd04a22366a05c96aaf9066435a3da8830d2801745334be"
+      "sha256": "ac4137c5a92e84d1123392b52ae35466e50a82dd45cda637caa06c2e96cc1a72"
     },
     {
       "path": "app/js/calendar.js",
@@ -47,9 +67,14 @@
       "sha256": "2429df101be0023296960d4b3e181d1c29e2fadc130a540bc52f7c83f3832e67"
     },
     {
+      "path": "app/js/character.js",
+      "size": 11464,
+      "sha256": "44e9405ccd72e6292b61b93eb21759bf328ad3fdcc7196792569d689c917eae8"
+    },
+    {
       "path": "app/js/checkins.js",
       "size": 7175,
-      "sha256": "83f18bc81d603200d9155c193f91c356e1b361cedbec9f56da84512f335698ab"
+      "sha256": "fd3fb435ca779b9de31495ce00fdfa1ab074c475f01eb4775b8ccbb9d1fe92ff"
     },
     {
       "path": "app/js/clock.js",
@@ -78,8 +103,13 @@
     },
     {
       "path": "app/js/main.js",
-      "size": 21431,
-      "sha256": "37b6a68d1a7ff9990d83d08579294aab6d84eb73a0ae7d1dcd2bd176306167b4"
+      "size": 25346,
+      "sha256": "8e0cfc4b853003c153c09bbaa9140ede087cf6a34e7d75580823759f7d0e12c7"
+    },
+    {
+      "path": "app/js/mouth.js",
+      "size": 8518,
+      "sha256": "ae786e830741ca93d48a511f8ecaa921f7f7dc42da4bdefaa9a482bf487986fc"
     },
     {
       "path": "app/js/package.json",
@@ -98,13 +128,13 @@
     },
     {
       "path": "app/js/screens/settings.js",
-      "size": 11448,
-      "sha256": "d4eb872225070c9250614d5e12c475a6e16d24159afededa0428c280e1fa4736"
+      "size": 11802,
+      "sha256": "1cdec20656bc4f21d79c2df2a861bf484aed81f93f6a7bb8319b0875df1ec839"
     },
     {
       "path": "app/js/screens/today.js",
-      "size": 4486,
-      "sha256": "23cf7595844f6f450ef6644e9f7c7e91aeb974b85452518fd6461519bb8e47f8"
+      "size": 4733,
+      "sha256": "8a1e8ccebf8e49245eeeed93812243687b97825b6855a745fe9cad2fed30ddac"
     },
     {
       "path": "app/js/screens/week.js",
@@ -133,8 +163,8 @@
     },
     {
       "path": "app/js/voice.js",
-      "size": 7437,
-      "sha256": "e36ab89feb2ded0d5e794da27efb2e66ab06d49df23ef97c68ca03aa04f8ebe9"
+      "size": 9492,
+      "sha256": "f9e0b692f57b537e348aacd070e5a4fe468d94b607127ba9e884f25ffd8e3af8"
     },
     {
       "path": "app/js/watch.js",
@@ -154,12 +184,12 @@
     {
       "path": "app/sw.js",
       "size": 1612,
-      "sha256": "a5a2174a243e3aed67841fa7fa85c0393e86e26df14b39110fd79cee4554cb33"
+      "sha256": "e507074b4e9d41e5260fab373d944107345c00d43bb37fa1b8b863f6fb0d26f2"
     },
     {
       "path": "config.example.json",
-      "size": 1679,
-      "sha256": "25d2b131e3f2c7c5335f5c4707bc9cf69becf3d70b71e58b8366772252975c4a"
+      "size": 1815,
+      "sha256": "bc320af6bf94580c59026eca804e39e53181d8af34ffb71ce00ed6b9436eb857"
     },
     {
       "path": "pc/boot.js",
@@ -203,9 +233,9 @@
     },
     {
       "path": "server.js",
-      "size": 9536,
-      "sha256": "d53aa623b149325de7782edeb1bde7949d3a0792f92f1793a0038a609e5e65b8"
+      "size": 9561,
+      "sha256": "19fb6b3a3817465e9e53944c84cfe7f6c22214ef9b6370cdd286cdb262c411e6"
     }
   ],
-  "path": "releases/0.3.0/"
+  "path": "releases/0.4.0/"
 }
